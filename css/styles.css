@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
 :root {
   --colr-main: #1B1F3A;
   --colr-secondary: #A64942;
@@ -28,16 +30,16 @@
 
 .nav_navbar-btn {
   font-size: 1rem;
-  color: var(--colr-white);
-  background: var(--colr-accent);
+  /* color: var(--colr-blk); */
+  background: var(--colr-secondary);
   padding: 8px 32px;
   border: transparent;
   border-radius: 4px;
 }
 
 .nav_navbar-btn:hover {
-  color: var(--colr-lightgrey);
-  background: var(--colr-drk-blue);
+  color: var(--colr-white);
+  background: var(--colr-accent);
 }
 
 .nav_logo {
@@ -45,7 +47,7 @@
 }
 
 .nav_logo a:hover {
-  color: var(--colr-background);
+  color: var(--colr-lightgrey);
 }
 
 .nav_list {
@@ -65,7 +67,7 @@
 }
 
 .nav_list-item a:hover {
-  color: #333;
+  color: var(--colr-lightgrey);
   /* padding-top: 14px; */
   /* border-top: 3px solid #333; */
 }
@@ -105,8 +107,9 @@
 }
 
 .hero_content-left a:nth-child(even) {
-  color: var(--colr-white);
-  background: var(--colr-blk);
+  color: var(--colr-blk);
+  border: 2px solid var(--colr-blk);
+  background: transparent;
   padding: 8px 32px;
   border-radius: 4px;
   margin-right: 1rem;
@@ -117,7 +120,8 @@
 }
 
 .hero_content-left a:nth-child(even):hover {
-  background: rgb(31, 48, 106);
+  color: var(--colr-accent);
+  border: 2px solid var(--colr-accent);
 }
 
 .hero_content-title {
@@ -186,7 +190,6 @@
 .skills_content-inner {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 50px 0;
   /* margin-top: 3.5rem; */
   /* border: 2px solid yellow; */
@@ -206,6 +209,7 @@
 }
 
 .skills_content-box h3 {
+  font-family: 'Kaushan Script', cursive;
   font-size: 1.2rem;
   font-weight: 500;
   color: var(--colr-blk);
@@ -213,6 +217,7 @@
 
 .skills_content-box img {
   width: 60px;
+  margin-bottom: 0.7rem;
 }
 
 .skills_content-box:not(:nth-child(6)) {
@@ -230,10 +235,11 @@
 }
 
 .about_title {
+  font-family: 'Kaushan Script', cursive;
   position: absolute;
-  font-weight: 800;
+  /* font-weight: 800; */
   color: var(--colr-white);
-  right: 205px;
+  right: 240px;
   top: 85px;
   font-size: 3.5rem;
   letter-spacing: 1px;
@@ -286,10 +292,10 @@
 .about_content-btn {
   font-size: 1rem;
   padding: 8px 32px;
-  color: var(--colr-main);
+  color: var(--colr-white);
   border-radius: 4px;
   letter-spacing: 1.5px;
-  background: var(--colr-white);
+  background: var(--colr-secondary);
 }
 
 .about_content-btn:hover {
@@ -299,7 +305,7 @@
 }
 
 .about_content-right h3 {
-  color: var(--colr-main);
+  color: var(--colr-accent);
   font-weight: 700;
   font-size: 2rem;
 }
@@ -336,7 +342,7 @@
 
 .portfolio_content {
   margin-inline: auto;
-  width: min(90%, 1000px);
+  width: min(90%, 1140px);
   padding: 50px 0;
   /* border: 2px solid red; */
 }
@@ -349,11 +355,27 @@
 }
 
 .portfolio_content-box {
-  
+  width: 100%;
+  /* height:450px; */
+  padding: 32px;
+  /* background: var(--colr-lighter-grey); */
+}
+
+.portfolio_content-box small {
+  color: #000;
+}
+
+.portfolio_content-box p {
+  color: #000;
 }
 
 .portfolio_content-box img {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
   width: 100%;
+  cursor: pointer;
   /* height: 400px; */
 }
 
@@ -374,10 +396,11 @@
 }
 
 .contact_content h2 {
+  font-family: 'Kaushan Script', cursive;
   position: absolute;
   top: 0;
   font-size: 3.5rem;
-  font-weight: 800;
+  /* font-weight: 800; */
   letter-spacing: 1px;
   color: var(--colr-white);
 }
@@ -431,13 +454,29 @@
 }
 
 .footer_content {
+  width: min(100%, 900px);
+  margin-inline: auto;
   padding: 50px;
-  background: red;
 }
 
 .footer_content-inner {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
   padding: 16px;
-  background: lime;
+}
+
+.footer_content-inner h2 {
+  color: var(--colr-sub-text);
+}
+
+
+.footer_content-icons {
+  color: var(--colr-sub-text);
+  font-size: 1.5rem;
+  margin-right: 16px;
+}
+
+.footer_content-icons:hover {
+  color: var(--colr-sub-text);
 }
