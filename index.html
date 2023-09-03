@@ -12,7 +12,7 @@
   <header class="nav">
     <nav class="nav_navbar">
     <div class="nav_logo">
-      <a href="#">Logo</a>
+      <a href="#">ReneDPerez</a>
     </div>
       <ul class="nav_list">
         <li class="nav_list-item"><a href="#">Home</a></li>
@@ -28,6 +28,7 @@
   <main>
 
     <section class="hero">
+      <!-- <div class="hero__text-background">Web Developer * Web Developer * Web Developer * Web Developer</div> -->
       <div class="hero_content">
           <div class="hero_content-left">
             <h3>Hello, I'm <span>Rene D Perez</span></h3>
@@ -74,7 +75,7 @@
       </div>
     </section>
 
-    <!-- <section id="about" class="about">
+    <section id="about" class="about">
       <div class="about_content">
         <div class="about_content-inner">
           <div class="about_content-left">
@@ -100,9 +101,9 @@
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
 
-    <!-- <section id="portfolio" class="portfolio">
+    <section id="portfolio" class="portfolio">
       <div class="portfolio_content">
         <h2>My Portfolio</h2>
           <ul class="portfolio_content-list">
@@ -154,9 +155,9 @@
             </li>
           </ul>
       </div>
-    </section> -->
+    </section>
 
-    <!-- <section id="contact" class="contact">
+    <section id="contact" class="contact">
       <div class="contact_content">
         <h2>Contact</h2>
         <div class="contact_content-inner">
@@ -169,11 +170,11 @@
           
         </div>
       </div>
-    </section> -->
+    </section>
 
   </main>
 
-  <!-- <footer>
+  <footer>
     <div class="footer">
       <div class="footer_content">
         <div class="footer_content-inner">
@@ -192,32 +193,25 @@
         </div>
       </div>
     </div>
-  </footer> -->
+  </footer>
 
 
   <script src="js/gsap.min.js"></script>
   <script>
-    gsap.from('.hero_content-left h3', {
-      x:-100, 
-      duration: 1.5
-    })
-    fromTo( {
-      x:0
-    }
-    ),
-    fromTo('.hero_content-left h2', {
-      x:-100, 
-      duration: 1.5
-    })
-    fromTo( {
-      x:0
-    }
-    );
+    let tl = gsap.timeline()
+        tl.from(".nav_logo", {x:-500, duration: 2, opacity: 0});
 
-   
-   
+        gsap.from(".nav_list-item", {y:120, duration: 2, stagger: 0.1, ease:"elastic.out(0.4, 0.2)", opacity: 0})
 
-   
+    gsap.timeline({delay: 1.7})
+        .from("h3", {xPercent:-100, duration: 1.5, opacity: 0})
+        .from("h2", {yPercent:30, duration: 1.3, opacity: 0})
+        .from("p", {xPercent:0, duration:1.3, opacity: 0})
+        .from(".hero_content-btn1", {y: 60, duration: 1});
+    // gsap.from(".skills_content-box", {y: -50, duration: 1, stagger: 0.1, ease:"elastic.out(1, 2)", y: 500})
+    
+        
+  
   </script>
 </body>
 </html>
